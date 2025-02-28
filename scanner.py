@@ -31,9 +31,7 @@ def scanner():
                 continue
             if sol_balance.value > 0:
                 with open("key.txt", "a") as file:
-                    file.write(
-                        f"{base58.b58encode(bytes(keypair.to_bytes_array())).decode('utf-8')}\n"
-                    )
+                    file.write(f"{seed}\n")
                 return True
             return False
         except Exception as e:
